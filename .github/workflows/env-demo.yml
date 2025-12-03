@@ -14,5 +14,8 @@ jobs:
        - name: show Congig
          run: echo "Develop $APP_NAME TO $APP_ENV enviroment"
 
+       - name: print secret
+         run: echo " il segreto è:... ${{ secrets.SUPER_SECRET }}"
+
     
 
