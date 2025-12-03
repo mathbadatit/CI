@@ -1,0 +1,14 @@
+name: hello pipeline
+on:
+    push:
+        branches: ["release"]
+
+jobs:
+    hello-job:
+        runs-on: ubuntu-latest
+        steps: 
+            - name: saluto!
+              run: echo "inzi amy workshop ci/cd"
+
+            - name: info systim
+              run : uname -a
