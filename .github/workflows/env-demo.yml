@@ -6,7 +6,6 @@ on:
 env:
     APP_NAME: "mygreatapp"
     APP_ENV: "staging"
-    SECRET: ${{ secrets.SUPER_SECRET }}
 
 jobs: 
    print-vars:
@@ -16,4 +15,4 @@ jobs:
          run: echo "Develop $APP_NAME TO $APP_ENV enviroment"
 
        - name: print secret
-         run: echo " il segreto è:... $SECRET"
+         run: echo " il segreto è:... ${{ secrets.SUPER_SECRET }}"
