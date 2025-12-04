@@ -1,8 +1,7 @@
 name: deploy-1
 on:
     push:
-        branches:
-            deploy
+        branches: ["deploy"]
 
 jobs:
     lets-deploy:
