@@ -1,0 +1,21 @@
+{
+  "name": "ci",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "mkdir dist && touch dist/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mathbadatit/CI.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mathbadatit/CI/issues"
+  },
+  "homepage": "https://github.com/mathbadatit/CI#readme"
+}
