@@ -1,5 +1,4 @@
-name: Complete Pipeline (CI/CD)
-
+name: Complete Pipeline 
 on:
   push:
     branches: ["staging"]
@@ -31,5 +30,5 @@ jobs:
       - name: Simulate Deployment
         run: echo " Deploying to Production"
       
-      - name: Deployment Success Message
+      - name: Deployment Success 
         run: echo "Deploy Completed successfully on branch staging!"
