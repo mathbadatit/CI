@@ -30,7 +30,7 @@ jobs:
     steps:
       - name: Deployment staging
         env:
-          MY_SECRET: ${{ secrets.SEGRETO_DI_STAGING}}
+          MY_SECRET: ${{ vars.SEGRETO_DI_STAGING}}
        
         run: echo "Deploying to TEST segreto è $MY_SECRET"
       
@@ -47,7 +47,7 @@ jobs:
     steps:
       - name: Deploying to production
         env:
-          MY_SECRET: ${{ secrets.SEGRETO_DI_PRODUZIONE}}
+          MY_SECRET: ${{ vars.SEGRETO_DI_PRODUZIONE}}
 
         run: echo "Deploying to production yay segreto è $MY_SECRET"
 
