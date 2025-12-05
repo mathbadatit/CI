@@ -29,6 +29,9 @@ jobs:
 
     steps:
       - name: Deployment staging
+        env:
+          MY-SECRET: ${{ secrets.SEGRETO_DI_STAGING}}
+       
         run: echo "Deploying to TEST"
       
   deploy-production:
@@ -43,6 +46,9 @@ jobs:
 
     steps:
       - name: Deploying to production
+        env:
+          MY-SECRET: ${{ secrets.SEGRETODI_PRODUZIONE}}
+
         run: echo "Deploying to production yay"
 
 
