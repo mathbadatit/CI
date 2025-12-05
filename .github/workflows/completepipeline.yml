@@ -17,15 +17,35 @@ jobs:
       - name: Run Tests
         run: npm run test 
 
-  deploy:
+  deploy-staging:
     needs: [build-and-test]
-    runs-on: ubuntu-latest
     
     if: github.ref == 'refs/heads/staging'
     
+    environment:
+      name: Staging
+
+    runs-on: ubuntu-latest
+
     steps:
-      - name: Simulate Deployment
-        run: echo " Deploying to Production"
+      - name: Deployment staging
+        run: echo "Deploying to TEST"
       
-      - name: Deployment Success 
-        run: echo "Deploy Completed successfully on branch staging!"
+  deploy-production:
+    needs: [build-and-test]
+
+    if: github.ref == 'refs/heads/main'
+
+    environment:
+      name: Production
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploying to production
+        run: echo "Deploying to production yay"
+
+
+
+
+
