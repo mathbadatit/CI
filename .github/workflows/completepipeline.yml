@@ -30,9 +30,9 @@ jobs:
     steps:
       - name: Deployment staging
         env:
-          MY_SECRET: ${{ vars.SEGRETO_DI_STAGING}}
+          SEGRETO: ${{ vars.MY_SECRET}}
        
-        run: echo "Deploying to TEST segreto è $MY_SECRET"
+        run: echo "Deploying to TEST segreto è $SEGRETO"
       
   deploy-production:
     needs: [build-and-test]
@@ -47,9 +47,9 @@ jobs:
     steps:
       - name: Deploying to production
         env:
-          MY_SECRET: ${{ vars.SEGRETO_DI_PRODUZIONE}}
+         SEGRETO: ${{ vars.MY_SECRET}}
 
-        run: echo "Deploying to production yay segreto è $MY_SECRET"
+        run: echo "Deploying to production yay segreto è $SEGRETO"
 
 
 
